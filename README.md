@@ -13,28 +13,6 @@ This service collects weather data from the Open Weather API and stores it as JS
 
 ### Installation
 
-1. Clone the repository:
-   ```sh
-   git clone https://github.com/maurofaboci/devgrid_weather_api
-2 - va pa pasta   cd devgrid_weather_service.
-
- 3  docker build -t devgrid_weather_service .
-  4 docker run -d -p 8000:8000 devgrid_weather_service:latest
-
-   5docker ps
-
-   usa o id do docker rodando na porta 8080
-
-   6docker exec -it <id_docker> /bin/bash
-
-   executa ele aqui
-
-   roda o pytest
-
-
-Voce pode testar tambem usando o /docs apos o paco 4 no localhost
-
-
 1. **Clone the Repository:**
    This command downloads the project from your remote repository to your local machine.
 
