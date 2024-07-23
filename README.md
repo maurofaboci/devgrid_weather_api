@@ -41,7 +41,7 @@ This service collects weather data from the Open Weather API and stores it as JS
 6. **Access the Container and Run Tests:**
    Opens a terminal session inside the running container, allowing you to execute commands such as running tests.
 
-   docker exec -it 19959cac5a6b /bin/bash
+   docker exec -it <your_container_id> /bin/bash
 
 Feel free to adjust any specific details according to your setup or preferences!
 
@@ -57,8 +57,9 @@ OR
 
 You can direct curl in the terminal after step 6 
 
-curl -X POST "http://localhost:8000/devgrid/weather" -H "Content-Type: application/json" -d '{"user_id": "YOUR_UNIQUE_USER_ID","city_ids": [3439525, 3439781, 3440645, 3442098]}'
+curl -X POST "http://localhost:8000/devgrid/weather" -H "Content-Type: application/json" -d '{"user_id": "<YOUR_UNIQUE_USER_ID>","city_ids": [3439525, 3439781, 3440645, 3442098]}'
 
-curl -X 'GET' 'http://localhost:8000/devgrid/weather/YOUR_UNIQUE_USER_ID' -H 'accept: application/json'
+curl -X 'GET' 'http://localhost:8000/devgrid/weather/<YOUR_UNIQUE_USER_ID>' -H 'accept: application/json'
 
-curl -X 'GET' 'http://localhost:8000/devgrid/weather_post_info/YOUR_UNIQUE_USER_ID' -H 'accept: application/json'
+
+curl -X 'GET' 'http://localhost:8000/devgrid/weather_post_info/<YOUR_UNIQUE_USER_ID>' -H 'accept: application/json'
