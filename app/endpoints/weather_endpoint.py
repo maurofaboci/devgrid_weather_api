@@ -50,7 +50,7 @@ async def create_weather_data(data: WeatherDataCreate, session: Session = Depend
             requistion_data.status = EStatus.ERROR
             requistion_data.date_end = datetime.now()
             session.commit()
-        raise Exception(status_code=500, detail=f'An error occurred: {e}')
+        raise HTTPException(status_code=500, detail=f'An error occurred: {e}')
 
 
 @router.get("/weather/{user_id}")
@@ -63,7 +63,7 @@ def get_weather_progress(user_id: str, session : Session = Depends(get_db)):
         
         return {"progress_percentage": progress_percentage}
     except Exception as e:
-        raise Exception(status_code=500, detail=f'An error occurred: {e}')
+        raise HTTPException(status_code=500, detail=f'An error occurred: {e}')
 
 @router.get("/weather_post_info/{user_id}")
 def get_weather_progress(user_id: str, session : Session = Depends(get_db)):
@@ -71,6 +71,6 @@ def get_weather_progress(user_id: str, session : Session = Depends(get_db)):
         request_info = session.query(PostWeatherInfos).filter_by(user_id=user_id).first()
         return request_info
     except Exception as e:
-        raise Exception(status_code=500, detail=f'An error occurred: {e}')
+        raise HTTPException(status_code=500, detail=f'An error occurred: {e}')
 
     
