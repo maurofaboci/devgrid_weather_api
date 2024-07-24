@@ -9,7 +9,6 @@ This service collects weather data from the Open Weather API and stores it as JS
 ### Prerequisites
 - Docker
 - Docker Compose
-- python
 
 ### Installation
 
